@@ -11,7 +11,7 @@ movies=[
 new_movies=int(input("How many movies would you like to add:"))
 for i in range(new_movies):
     name=input(f"Enter the name of movie{i+1}:")
-    budget=int(input("Enter the budget of '{name}':"))
+    budget=int(input(f"Enter the budget of '{name}':"))
     movies.append((name,budget))
 total_budget=0
 for movie in movies:
@@ -24,4 +24,5 @@ for name,budget in movies:
         difference=budget - avg_budget
         print(f"'{name}' had a budegt higher than average by ${difference:,.0f}")
         above_avg_movies.append(name)
+
 print(f"\n Number of movies above average budget: {len(above_avg_movies)}")
